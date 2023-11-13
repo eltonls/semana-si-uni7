@@ -15,13 +15,13 @@ const Card = styled.div`
   border-radius: 1rem;
   box-shadow: #008F57 0px 5px 15px;
   width: 20rem;
-  padding: 2rem;
+  padding: 1rem;
   margin-top: 3.5rem;
 
   h4 {
     position: absolute;
     left: 50%;
-    top: -10%;
+    top: -15%;
     transform: translateX(-50%);
     font-size: 8rem;
     color: #008F57;

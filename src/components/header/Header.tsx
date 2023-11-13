@@ -16,7 +16,7 @@ const Wrapper = styled.header`
   max-width: 100%;
   position: sticky;
   height: 4rem;
-  padding: 1.5rem;
+  padding: 3rem;
   background: #202024;
   color: #FCFCFC;
   display: flex;

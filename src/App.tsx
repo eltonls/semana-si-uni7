@@ -4,6 +4,7 @@ import Bg from "./assets/img/bg3.jpg"
 import logoSI from "./assets/logos/SI.png"
 import Timer from "./components/Timer"
 import CardAbout from "./components/Cards/CardAbout"
+import CardSpeaker from "./components/Cards/CardSpeaker"
 
 const Section = styled.section`
   position: relative;
@@ -28,6 +29,17 @@ const HeroSection = styled(Section)`
 const AboutSection = styled(Section)`
   background-color: #202024;  
   color: #fff;
+  padding: 5rem;
+
+  p {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+
+    @media(min-width: 1200px) {
+      font-size: 2.5rem;
+    }
+  }
 `
 
 const SectionTitle = styled.h2` 
@@ -39,7 +51,6 @@ const SectionTitle = styled.h2`
 
   @media(min-width: 1200px) {
     font-size: 4rem;
-    text-align: left;
   }
 `
 
@@ -184,16 +195,24 @@ function App() {
           &lt;Semana de <span className="text-blue">Sistemas </span>
           de <span className="text-yellow">Informação</span>&gt;
         </SectionTitle>
-        <Text>
+        <p>
           Evento gratuito e aberto ao público voltado
           para alunos e interessados por tecnologia!
-        </Text>
+        </p>
 
         <CardsWrapper>
           <CardAbout num="4" title="Opções de Oficina" icon="gear" desc="Figma, React Native, Git e Java" />
           <CardAbout num="+4" title="Opçõe de Palestras" icon="screen" desc="Figma, React Native, Git e Java" />
           <CardAbout num="5" title="Dias de Network" icon="people" desc="Figma, React Native, Git e Java" />
           <CardAbout num="+4" title="Opções de Prêmios" icon="trophy" desc="Ganhe no Kahoot e na competição" />
+        </CardsWrapper>
+
+        <CardsWrapper>
+          <CardSpeaker
+            name="Carlos Germano"
+            cargo="Analista de negócios sênior - Tribunal de Justiça do Estado do Ceará"
+            imgUrl="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww"
+          />
         </CardsWrapper>
       </AboutSection>
     </>
