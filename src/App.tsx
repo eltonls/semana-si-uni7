@@ -3,12 +3,16 @@ import Header from "./components/header/Header"
 import Bg from "./assets/img/bg3.jpg"
 import logoSI from "./assets/logos/SI.png"
 import Timer from "./components/Timer"
+import CardAbout from "./components/Cards/CardAbout"
 
-const HeroSection = styled.section`
+const Section = styled.section`
   position: relative;
   width: 100vw;
   z-index: -2;
   padding-top: 1.5rem;
+`
+
+const HeroSection = styled(Section)`
   background-image: linear-gradient(130deg, 
     rgba(0,143,87,0.7) 0%, 
     rgba(18,19,15,0.7) 100%),
@@ -18,6 +22,24 @@ const HeroSection = styled.section`
 
   @media (min-width: 576px) {
     padding-top: 3.5rem;
+  }
+`
+
+const AboutSection = styled(Section)`
+  background-color: #202024;  
+  color: #fff;
+`
+
+const SectionTitle = styled.h2` 
+  font-size: 2.2rem;
+  padding: 0 1.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: #fff;
+
+  @media(min-width: 1200px) {
+    font-size: 4rem;
+    text-align: left;
   }
 `
 
@@ -65,6 +87,7 @@ const Title = styled.h1`
 
 const Text = styled.p`
   font-size: 2.2rem;
+  text-align: center;
   
   @media(min-width: 1200px) {
     font-size: 4rem;
@@ -122,6 +145,11 @@ const TextCode = styled.p`
   }
 `
 
+const CardsWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`
+
 function App() {
   return (
     <>
@@ -150,31 +178,24 @@ function App() {
           </DateText>
           <Timer />
         </div>
-        <div>
-          <DateText>
-            <DateSpan>20NOV</DateSpan>
-            —
-            <DateSpan>24NOV</DateSpan>
-          </DateText>
-          <Timer />
-        </div>
-        <div>
-          <DateText>
-            <DateSpan>20NOV</DateSpan>
-            —
-            <DateSpan>24NOV</DateSpan>
-          </DateText>
-          <Timer />
-        </div>
-        <div>
-          <DateText>
-            <DateSpan>20NOV</DateSpan>
-            —
-            <DateSpan>24NOV</DateSpan>
-          </DateText>
-          <Timer />
-        </div>
       </HeroSection>
+      <AboutSection>
+        <SectionTitle>
+          &lt;Semana de <span className="text-blue">Sistemas </span>
+          de <span className="text-yellow">Informação</span>&gt;
+        </SectionTitle>
+        <Text>
+          Evento gratuito e aberto ao público voltado
+          para alunos e interessados por tecnologia!
+        </Text>
+
+        <CardsWrapper>
+          <CardAbout num="4" title="Opções de Oficina" icon="gear" desc="Figma, React Native, Git e Java" />
+          <CardAbout num="+4" title="Opçõe de Palestras" icon="screen" desc="Figma, React Native, Git e Java" />
+          <CardAbout num="5" title="Dias de Network" icon="people" desc="Figma, React Native, Git e Java" />
+          <CardAbout num="+4" title="Opções de Prêmios" icon="trophy" desc="Ganhe no Kahoot e na competição" />
+        </CardsWrapper>
+      </AboutSection>
     </>
   )
 }
