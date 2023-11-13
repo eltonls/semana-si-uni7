@@ -2,7 +2,13 @@ import styled from "styled-components"
 import { FiMenu } from "react-icons/fi"
 import { AiOutlineClose } from "react-icons/ai"
 import logo from "../../assets/logos/logo-uni7-hor-vazado.png"
-import { useState } from "react"
+import { MouseEventHandler } from "react"
+
+type NavProps = {
+  handleButtonMenu: MouseEventHandler,
+  handleButtonClose: MouseEventHandler,
+  isMenuOpen: boolean
+}
 
 const Container = styled.nav`
 `
@@ -24,10 +30,11 @@ const Menu = styled.div`
   @media (max-width: 576px) {
     background: #202024;
     position: fixed;  
+    z-index: 50;
     left: 0;
     top: 0;
     width: 100vw;
-    height: 100vh;
+    height: 110vh;
   }
 
   @media (min-width: 576px) {
@@ -86,27 +93,17 @@ const Logo = styled.img`
   width: 8rem;
 `
 
-const Nav = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-
-  const handleButtonMenu = () => {
-    setIsMenuOpen(true)
-  }
-
-  const handleButtonClose = () => {
-    setIsMenuOpen(false)
-  }
-
+const Nav = (props: NavProps) => {
   return (
     <Container>
-      <MenuBtn onClick={handleButtonMenu}>
+      <MenuBtn onClick={props.handleButtonMenu}>
         <FiMenu />
       </MenuBtn>
 
-      <Menu className={isMenuOpen ? "show" : "invisible"}>
+      <Menu className={props.isMenuOpen ? "show" : "invisible"}>
         <Header >
           <Logo src={logo} />
-          <MenuBtn onClick={handleButtonClose}>
+          <MenuBtn onClick={props.handleButtonClose}>
             <AiOutlineClose />
           </MenuBtn>
         </Header>

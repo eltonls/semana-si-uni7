@@ -28,6 +28,15 @@ const Wrapper = styled.header`
 
 const Header = () => {
   const [scrollDirection, setScrollDirection] = useState<string>("")
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
+
+  const handleButtonMenu = () => {
+    setIsMenuOpen(true)
+  }
+
+  const handleButtonClose = () => {
+    setIsMenuOpen(false)
+  }
 
   useEffect(() => {
     let lastScrollY = window.scrollY
@@ -39,6 +48,7 @@ const Header = () => {
       if (direction !== scrollDirection &&
         (scrollY - lastScrollY > 10 || scrollY - lastScrollY < -10)) {
         setScrollDirection(direction)
+        handleButtonClose()
       }
 
       lastScrollY = scrollY > 0 ? scrollY : 0;
@@ -51,12 +61,13 @@ const Header = () => {
     }
   }, [scrollDirection])
 
+
   return (
     <Wrapper className={scrollDirection === "Down" ? "invisible" : "show"}>
       <LogoLink>
         <Logo src={logo} />
       </LogoLink>
-      <Nav />
+      <Nav handleButtonMenu={handleButtonMenu} handleButtonClose={handleButtonClose} isMenuOpen={isMenuOpen} />
     </Wrapper>
   )
 }
