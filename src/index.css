@@ -66,6 +66,18 @@ body {
   display: block;
 }
 
+.heading-primary {
+  font-size: 2.4rem;
+}
+
+.text-blue {
+  color: #0066B2;
+}
+
+.text-yellow {
+  color: #FCB813;
+}
+
 @keyframes showFromTop {
   0% {
     opacity: .9;
@@ -87,3 +99,5 @@ body {
     transform: translateY(-100%);
   }
 }
+
+
