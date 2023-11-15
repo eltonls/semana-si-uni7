@@ -9,15 +9,16 @@ type SpeakerCardProps = {
 }
 
 const Card = styled.div`   
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
-  margin: 0rem auto;
+  margin: 2rem auto;
   border-radius: 1rem;
   box-shadow: #008F57 0px 5px 15px;
   width: 20rem;
+  height: 35rem;
   padding: .5rem;
-  padding-top: 6.4rem;
-  margin-top: 7.5rem;
 
   .data {
     padding: 1rem .5rem;
@@ -27,10 +28,11 @@ const Card = styled.div`
   }
 
   @media(min-width: 1200px) {
-    margin-top: 2rem;
+    margin: 5rem;
+    margin-top: 0rem;
   }
 `
-
+/*
 const ImageContainer = styled.div`
   width: 14rem;
   height: 14rem;
@@ -46,7 +48,7 @@ const CardImage = styled.img`
   height: 100%;
 
   border-radius: 50%;
-`
+` */
 
 const Name = styled.h3` 
   margin: 2.5rem 0;
@@ -73,9 +75,6 @@ const SocialButtonsWrapper = styled.div`
 const CardSpeaker = (props: SpeakerCardProps) => {
   return (
     <Card>
-      <ImageContainer>
-        <CardImage src={props.imgUrl} />
-      </ImageContainer>
       <Name>{props.name}</Name>
       <Position>{props.cargo}</Position>
       <SocialButtonsWrapper>

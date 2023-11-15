@@ -202,6 +202,7 @@ const TextCode = styled.p`
 const CardsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin-top: 8rem;
 `
 
@@ -264,16 +265,82 @@ function App() {
             dataDeParticipacao="Seg - Mesa Redonda"
           />
           <CardSpeaker
-            name="Carlos Germano"
-            cargo="Analista de negócios sênior - Tribunal de Justiça do Estado do Ceará"
+            name="Victor Carvalho"
+            cargo="Analista DevOps - SERPRO"
             imgUrl="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww"
             dataDeParticipacao="Seg - Mesa Redonda"
           />
           <CardSpeaker
-            name="Carlos Germano"
-            cargo="Analista de negócios sênior - Tribunal de Justiça do Estado do Ceará"
+            name="Victor Deodato"
+            cargo="Desenvolvedor IOS Sênior"
             imgUrl="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww"
             dataDeParticipacao="Seg - Mesa Redonda"
+          />
+          <CardSpeaker
+            name="Raylan Cordeiro"
+            cargo="Desenvolvedor, Professor e Freelancer - Digibee"
+            imgUrl="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww"
+            dataDeParticipacao="Seg - Mesa Redonda"
+          />
+          <CardSpeaker
+            name="Welton Diones"
+            cargo="Analista de Inteligência de Negócio - Boticário"
+            imgUrl="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww"
+            dataDeParticipacao="Seg - Mesa Redonda"
+          />
+          <CardSpeaker
+            name="Ramon Martins"
+            cargo="Engenheiro de Cibersegurança"
+            imgUrl="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww"
+            dataDeParticipacao="Seg - Mesa Redonda"
+          />
+          <CardSpeaker
+            name="Nayara Valevskii"
+            cargo="Gerente de Gente e Gestão - Konstroi"
+            imgUrl="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww"
+            dataDeParticipacao="Ter - Palestra"
+          />
+          <CardSpeaker
+            name="Charlyane Araújo"
+            cargo="Analista de Dados - Voke"
+            imgUrl="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww"
+            dataDeParticipacao="Ter - Oficina"
+          />
+          <CardSpeaker
+            name="Mateus Cesar"
+            cargo="Engenheiro de Software - Instituto Atlântico"
+            imgUrl="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww"
+            dataDeParticipacao="Ter - Oficina"
+          />
+          <CardSpeaker
+            name="Claudemir Queiroz"
+            cargo="Mestre em Computação Aplicada(Uece), Professor em Cibersegurança, CEO da CQRisk"
+            imgUrl="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww"
+            dataDeParticipacao="Qua - Palestra"
+          />
+          <CardSpeaker
+            name="Kallebe Dantas"
+            cargo="Desenvolvedor Fullstack"
+            imgUrl="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww"
+            dataDeParticipacao="Qua - Oficina"
+          />
+          <CardSpeaker
+            name="Rafael Nunes"
+            cargo="Desenvolvedor Fullstack"
+            imgUrl="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww"
+            dataDeParticipacao="Qua - Oficina"
+          />
+          <CardSpeaker
+            name="Alex Souza"
+            cargo="Mestre em Inteligência Artificial, Especialista em Análise de Dados - Compass.uol"
+            imgUrl="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww"
+            dataDeParticipacao="Qui - Palestra"
+          />
+          <CardSpeaker
+            name="Jailson Batista"
+            cargo="Executive Director - Lanlink Informática Ltda."
+            imgUrl="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww"
+            dataDeParticipacao="Qui - Palestra"
           />
         </CardsWrapper>
       </SectionSpeakers>
