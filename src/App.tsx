@@ -1,16 +1,26 @@
 import styled from "styled-components"
 import Header from "./components/header/Header"
 import Bg from "./assets/img/bg3.jpg"
+import Bg2 from "./assets/img/bg2.jpg"
 import logoSI from "./assets/logos/SI.png"
 import Timer from "./components/Timer"
 import CardAbout from "./components/Cards/CardAbout"
 import CardSpeaker from "./components/Cards/CardSpeaker"
+import CardCronology from "./components/Cards/CardCronology"
+import CardFAQ from "./components/Cards/CardFAQ"
+import Footer from "./components/footer/Footer"
+import { events21NOV, events22NOV, events23NOV, events24NOV } from "./EventsInfo"
 
 const Section = styled.section`
   position: relative;
   width: 100vw;
   z-index: -2;
-  padding-top: 1.5rem;
+  padding: 3rem;
+`
+
+const SectionSpeakers = styled(Section)`
+  background-color: #202024;
+  color: #fff;
 `
 
 const HeroSection = styled(Section)`
@@ -42,14 +52,38 @@ const AboutSection = styled(Section)`
   }
 `
 
+const SectionFAQ = styled(Section)` 
+  color: #fff;
+  background-image: linear-gradient(130deg, 
+    rgba(32, 32, 36, .7) 0%, 
+    rgba(32,32,36,0.7) 100%),
+  url(${Bg2});
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+`
+
+const SectionCronology = styled(Section)`
+  border-radius: 1rem;
+  background-image: linear-gradient(130deg, 
+    rgba(0,143,87,0.7) 0%, 
+    rgba(18,19,15,0.7) 100%),
+  url(${Bg});
+  background-size: cover;
+  background-position: center;
+  margin-top: -1rem;
+`
+
 const SectionTitle = styled.h2` 
   font-size: 2.2rem;
   padding: 0 1.5rem;
   margin-bottom: 3rem;
   text-align: center;
   color: #fff;
-
-  @media(min-width: 1200px) {
+  
+  @media(min-width: 768px) {
     font-size: 4rem;
   }
 `
@@ -108,7 +142,7 @@ const Text = styled.p`
 
 const Button = styled.button`
   display: block;
-  padding: 1rem 5rem;
+  padding: 1rem 0rem;
   background-color: #E1E1E6;
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.7rem;
@@ -116,6 +150,15 @@ const Button = styled.button`
   border-radius: 1rem;
   margin: 0 auto;
   margin-top: 1.5rem;
+
+  a {
+    text-decoration: none;
+    width: 100%;
+    padding: 1rem 3rem;
+    @media(min-width: 1200px) {
+      padding: 2rem 5rem;
+    }
+  }
 
   @media(min-width: 1200px) {
     padding: 1.5rem 7rem;
@@ -159,6 +202,7 @@ const TextCode = styled.p`
 const CardsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
+  margin-top: 8rem;
 `
 
 function App() {
@@ -178,7 +222,7 @@ function App() {
             inteligência artificial e muito mais!
           </Text>
           <Button>
-            Inscrever-se
+            <a href="https://www.sympla.com.br/evento/semana-de-sistemas-de-informacao/2214911" target="_blank">Inscrever-se</a>
           </Button>
         </Card>
         <div>
@@ -206,15 +250,64 @@ function App() {
           <CardAbout num="5" title="Dias de Network" icon="people" desc="Figma, React Native, Git e Java" />
           <CardAbout num="+4" title="Opções de Prêmios" icon="trophy" desc="Ganhe no Kahoot e na competição" />
         </CardsWrapper>
+      </AboutSection>
 
+      <SectionSpeakers id="Convidados">
+        <SectionTitle>
+          &lt;Convidados Confirmados/&gt;
+        </SectionTitle>
         <CardsWrapper>
           <CardSpeaker
             name="Carlos Germano"
             cargo="Analista de negócios sênior - Tribunal de Justiça do Estado do Ceará"
             imgUrl="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww"
+            dataDeParticipacao="Seg - Mesa Redonda"
+          />
+          <CardSpeaker
+            name="Carlos Germano"
+            cargo="Analista de negócios sênior - Tribunal de Justiça do Estado do Ceará"
+            imgUrl="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww"
+            dataDeParticipacao="Seg - Mesa Redonda"
+          />
+          <CardSpeaker
+            name="Carlos Germano"
+            cargo="Analista de negócios sênior - Tribunal de Justiça do Estado do Ceará"
+            imgUrl="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww"
+            dataDeParticipacao="Seg - Mesa Redonda"
           />
         </CardsWrapper>
-      </AboutSection>
+      </SectionSpeakers>
+
+      <SectionCronology id="Programação">
+        <SectionTitle>&lt;Programação/&gt;</SectionTitle>
+        <CardCronology events={events21NOV} date="21 NOV" />
+        <CardCronology events={events22NOV} date="22 NOV" />
+        <CardCronology events={events23NOV} date="23 NOV" />
+        <CardCronology events={events24NOV} date="24 NOV" />
+      </SectionCronology>
+
+      <SectionFAQ>
+        <CardFAQ
+          question="Qual o local do Evento?"
+          answer="Av. Almirante Maximiniano da Fonseca, 1395 - Luciano Cavalcante, Fortaleza - CE, 60811-020" />
+        <CardFAQ
+          question="Haverá certificado para os participantes?"
+          answer="Sim, será emitido certificado para os participantes"
+        />
+        <CardFAQ
+          question="Posso participar sem ser aluno da faculdade?"
+          answer="Sim, o evento estará aberto a todo o público interessado"
+        />
+        <CardFAQ
+          question="Para quem é o evento?"
+          answer="Para qualquer um que tenha interesse na área de tecnologia, apenas com o adendo de que algumas oficinas requerem conhecimento prévio"
+        />
+        <CardFAQ
+          question="Existem requisitos para participar?"
+          answer="Algumas das oficinas requerem algum tipo de conhecimento prévio como: familiaridade com uso de interfaces de linha de comando, conhecimento básico em programação, etc."
+        />
+      </SectionFAQ>
+      <Footer />
     </>
   )
 }

@@ -34,7 +34,7 @@ const Menu = styled.div`
     left: 0;
     top: 0;
     width: 100vw;
-    height: 110vh;
+    height: 100vh;
   }
 
   @media (min-width: 576px) {
@@ -61,6 +61,11 @@ const MenuList = styled.ul`
   li {
     text-shadow: #008F57 0px 5px 15px;
     margin-bottom: 2rem;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
   }
 
   @media (min-width: 576px) {
@@ -108,8 +113,8 @@ const Nav = (props: NavProps) => {
           </MenuBtn>
         </Header>
         <MenuList>
-          <li>Programação</li>
-          <li>Palestrantes</li>
+          <li> <a href="#Programação" onClick={props.handleButtonClose}>Programação</a></li>
+          <li> <a href="#Convidados" onClick={props.handleButtonClose}>Convidados</a></li>
         </MenuList>
       </Menu>
     </Container>

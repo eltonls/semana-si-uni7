@@ -17,13 +17,17 @@ const Card = styled.div`
   width: 20rem;
   padding: .5rem;
   padding-top: 6.4rem;
-  margin-top: 3.5rem;
+  margin-top: 7.5rem;
 
   .data {
     padding: 1rem .5rem;
     background-color: #008F57;
     border-radius: 1rem;
     font-size: 1.8rem;
+  }
+
+  @media(min-width: 1200px) {
+    margin-top: 2rem;
   }
 `
 
