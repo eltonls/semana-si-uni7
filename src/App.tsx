@@ -9,7 +9,7 @@ import CardSpeaker from "./components/Cards/CardSpeaker"
 import CardCronology from "./components/Cards/CardCronology"
 import CardFAQ from "./components/Cards/CardFAQ"
 import Footer from "./components/footer/Footer"
-import { events21NOV, events22NOV, events23NOV, events24NOV } from "./EventsInfo"
+import { events20NOV, events21NOV, events22NOV, events23NOV, events24NOV } from "./EventsInfo"
 
 const Section = styled.section`
   position: relative;
@@ -247,7 +247,7 @@ function App() {
 
         <CardsWrapper>
           <CardAbout num="4" title="Opções de Oficina" icon="gear" desc="Figma, React Native, Git e Java" />
-          <CardAbout num="+4" title="Opçõe de Palestras" icon="screen" desc="Figma, React Native, Git e Java" />
+          <CardAbout num="+4" title="Opções de Palestras" icon="screen" desc="Figma, React Native, Git e Java" />
           <CardAbout num="5" title="Dias de Network" icon="people" desc="Figma, React Native, Git e Java" />
           <CardAbout num="+4" title="Opções de Prêmios" icon="trophy" desc="Ganhe no Kahoot e na competição" />
         </CardsWrapper>
@@ -347,6 +347,7 @@ function App() {
 
       <SectionCronology id="Programação">
         <SectionTitle>&lt;Programação/&gt;</SectionTitle>
+        <CardCronology events={events20NOV} date="20 NOV" />
         <CardCronology events={events21NOV} date="21 NOV" />
         <CardCronology events={events22NOV} date="22 NOV" />
         <CardCronology events={events23NOV} date="23 NOV" />

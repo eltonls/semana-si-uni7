@@ -1,6 +1,6 @@
 import Event from "./types/Event"
 
-const events21NOV: Event[] = [
+const events20NOV: Event[] = [
   {
     title: "Festival de software (18h30 - 19h50)",
     desc: "apresentação dos trabalhos das cadeiras de estágio I, II e III"
@@ -16,6 +16,9 @@ const events21NOV: Event[] = [
       (Digibee); Welton Diones, analista de inteligência 
       de negócio (Boticário); Ramon Martins, engenheiro de cibersegurança (Red Team)\"`
   },
+]
+
+const events21NOV: Event[] = [
   {
     title: "Palestra (18h30 - 20h10)",
     desc: `"Como construir um perfil atrativo para recrutadores" - com Nayara Valevskii, gerente de gente e gestão (Konstroi)`
@@ -65,4 +68,4 @@ const events24NOV: Event[] = [
   }
 ]
 
-export { events21NOV, events22NOV, events23NOV, events24NOV }
+export { events20NOV, events21NOV, events22NOV, events23NOV, events24NOV }
