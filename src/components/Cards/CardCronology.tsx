@@ -77,14 +77,14 @@ const CardCronology = (props: CardCronologyProps) => {
         <h4>{props.date}</h4>
       </DateBox>
       <DescBox>
-        {props.events.map((event) => {
+        {props.events.map((event, idx) => {
           return (
-            <>
+            <li key={idx}>
               <h3>{event.title}</h3>
               <p>
                 {event.desc}
               </p>
-            </>
+            </li>
           )
         })}
       </DescBox>

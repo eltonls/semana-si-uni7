@@ -1,5 +1,5 @@
-import { intervalToDuration } from "date-fns"
-import { useState } from "react"
+import { intervalToDuration, isAfter } from "date-fns"
+import { useEffect, useState } from "react"
 import styled from "styled-components"
 
 const CountdownTimer = styled.div`
@@ -61,14 +61,23 @@ const Timer = () => {
     })
   )
 
-  setTimeout(() => {
-    const countdown: Duration = intervalToDuration({
-      start: new Date(),
-      end: EventDate
-    })
+  useEffect(() => {
+    if (!isAfter(new Date(), EventDate)) {
+      setTimeout(() => {
+        const countdown: Duration = intervalToDuration({
+          start: new Date(),
+          end: EventDate
+        })
 
-    setTimer(countdown)
-  }, 1000);
+        setTimer(countdown)
+      }, 1000);
+    } else {
+      setTimer(intervalToDuration({
+        start: new Date(),
+        end: new Date(),
+      }))
+    }
+  }, [])
 
   return (
     <CountdownTimer>
